@@ -1,23 +1,37 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+
+import Navbar from "./components/common/Navbar";
+
 import Home from "./pages/Home";
-// import About from "./pages/About";
-// import Services from "./pages/Services";
-// import Contact from "./pages/Contact";
+import About from "./pages/About";
+import Register from "./pages/Register";
+import Courses from "./pages/Courses";
+import Services from "./pages/Services";
+import Contact from "./pages/Contact";
 // import Login from "./pages/admin/Login";
 // import Dashboard from "./pages/admin/Dashboard";
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        {/* <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/admin/login" element={<Login />} />
-        <Route path="/admin/dashboard" element={<Dashboard />} /> */}
-      </Routes>
+      <Navbar />
+
+      {/* Padding for fixed navbar */}
+      <div className="pt-7.5">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+
+          {/* Admin routes (Phase-2) */}
+          {/* <Route path="/admin/login" element={<Login />} /> */}
+          {/* <Route path="/admin/dashboard" element={<Dashboard />} /> */}
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

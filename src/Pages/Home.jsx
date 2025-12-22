@@ -9,6 +9,7 @@ import TechCarousel from "../components/TechCarousel/TechCarousel";
 export default function Home() {
   return (
     <>
+
       <Navbar />
       <Carousel />
       {/* <CourseDetails /> */}

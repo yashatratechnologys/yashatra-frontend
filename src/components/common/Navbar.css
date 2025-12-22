@@ -1,15 +1,13 @@
-/* Navbar main */
+/* ================= NAVBAR ================= */
 .navbar {
   background-color: #0F2A44;
-  padding: 10px 20px;
-  margin: -1% 0 0 0 ;
+  padding: 12px 24px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
 }
-
 
 /* Container */
 .navbar-container {
@@ -22,52 +20,57 @@
 
 /* Logo */
 .navbar-logo {
-  height: 80px;
+  height: 70px;
   width: auto;
 }
 
-/* Links */
+/* ================= LINKS ================= */
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 20px;
-  font-size: 22px;
+  align-items: center;
+  gap: 24px;
   margin: 0;
   padding: 0;
 }
 
-.navbar-links li {
-  cursor: pointer;
-  color: white;
-
-  padding: 10px 18px;   /* increase this to extend more */
+.navbar-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 16px;
   border-radius: 6px;
-
-  transition: 
-    background-color 0.3s ease,
-    color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navbar-links li:hover {
-  color: #5FE0D6; /* blue */
-    background-color: #1FA6A0;
-    box-shadow: #E5E7EB;
-    width: 50%;
-    
+.navbar-links li a:hover {
+  background-color: #1FA6A0;
+  color: #5FE0D6;
 }
 
-/* Search bar wrapper (pushes right) */
+/* CTA Button */
+.navbar-links li .btn-register {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.navbar-links li .btn-register:hover {
+  background-color: #1d4ed8;
+  color: #ffffff;
+}
+
+/* ================= SEARCH ================= */
 .search-bar-wrapper {
   margin-left: auto;
 }
 
-/* Search bar */
 .search-bar {
   display: flex;
   align-items: center;
   background-color: #ffffff;
   border-radius: 6px;
-  padding: 10px 14px;
+  padding: 8px 12px;
   width: 260px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
@@ -80,27 +83,9 @@
 }
 
 .search-icon {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   color: #9ca3af;
-}
-
-
-/* DEFAULT (Laptop / Desktop) */
-.navbar {
-  padding: 12px 24px;
-}
-
-.navbar-logo {
-  height: 70px;
-}
-
-.navbar-links {
-  gap: 28px;
-}
-
-.search-bar {
-  width: 260px;
 }
 
 /* ================= MOBILE ================= */
@@ -117,8 +102,11 @@
 
   .navbar-links {
     flex-direction: column;
-    gap: 12px;
-    font-size: 16px;
+    width: 100%;
+  }
+
+  .navbar-links li a {
+    width: 100%;
   }
 
   .search-bar {
@@ -132,8 +120,7 @@
     height: 60px;
   }
 
-  .navbar-links {
-    gap: 20px;
+  .navbar-links li a {
     font-size: 17px;
   }
 
@@ -142,18 +129,10 @@
   }
 }
 
-/* ================= LARGE MONITOR ================= */
+/* ================= LARGE SCREEN ================= */
 @media (min-width: 1201px) {
   .navbar-container {
     max-width: 1400px;
-  }
-
-  .navbar-logo {
-    height: 80px;
-  }
-
-  .navbar-links {
-    font-size: 19px;
   }
 
   .search-bar {
