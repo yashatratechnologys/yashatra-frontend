@@ -1,0 +1,102 @@
+/* Same outer spacing as CourseDetails */
+.department-section {
+  padding: 60px 20px;
+  background-color: #1e62a738;
+}
+
+/* Same container width & alignment */
+.department-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  gap: 40px;
+  align-items: center;
+
+  background-color: #ffffff;
+  padding: 40px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Image section – SAME SIZE as CourseDetails */
+.department-image {
+  flex: 1;
+}
+
+.department-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* Content section */
+.department-info {
+  flex: 1;
+}
+
+.department-info h2 {
+  font-size: 32px;
+  color: #0f2a44;
+  margin-bottom: 14px;
+}
+
+.department-desc {
+  font-size: 17px;
+  color: #374151;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+/* List */
+.department-points {
+  padding-left: 18px;
+  margin-bottom: 24px;
+}
+
+.department-points li {
+  font-size: 16px;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+/* Button – same feel as course button */
+.department-btn {
+  background-color: #1fa6a0;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.department-btn:hover {
+  background-color: #168b86;
+}
+
+/* ================= RESPONSIVE (SAME AS COURSE) ================= */
+
+@media (max-width: 768px) {
+  .department-container {
+    flex-direction: column;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .department-info h2 {
+    font-size: 26px;
+  }
+
+  .department-points {
+    padding-left: 0;
+  }
+
+  .department-btn {
+    width: 100%;
+  }
+}

@@ -1,2 +1,0 @@
-# yashatra-frontend
-Company Website

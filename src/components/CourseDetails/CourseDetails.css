@@ -1,0 +1,76 @@
+/* Section background */
+.course-section {
+  margin-top: 1%;
+  padding: 60px 20px;
+  background-color: #f9fafb;
+  border: 1px solid #6f6f70;
+  border-radius: 16px;
+}
+
+/* Main container */
+.course-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Image side */
+.course-image {
+  flex: 1;
+}
+
+.course-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Info side */
+.course-info {
+  flex: 1;
+}
+
+.course-info h2 {
+  font-size: 32px;
+  color: #0f2a44;
+  margin-bottom: 16px;
+}
+
+.course-desc {
+  font-size: 17px;
+  color: #374151;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+/* Points */
+.course-points {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.course-points li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+/* Button */
+.course-btn {
+  background-color: #1fa6a0;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.course-btn:hover {
+  background-color: #168b86;
+}
