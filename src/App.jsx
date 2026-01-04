@@ -3,12 +3,12 @@ import "./App.css";
 
 import Navbar from "./components/common/Navbar";
 
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Register from "./pages/Register";
-import Courses from "./pages/Courses";
-import Services from "./pages/Services";
-import Contact from "./pages/Contact";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Register from "./Pages/Register";
+import Courses from "./Pages/Courses";
+import Services from "./Pages/Services";
+import Contact from "./Pages/Contact";
 // import Login from "./pages/admin/Login";
 // import Dashboard from "./pages/admin/Dashboard";
 
