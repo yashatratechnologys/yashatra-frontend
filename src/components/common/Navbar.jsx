@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import Logo from "../../assets/logo.jpeg";
+import Logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 flex items-center">
 
         {/* Logo */}
-        <NavLink to="/" className="flex items-center gap-3 ml-0.5">
+        <NavLink to="/" className="flex items-center gap-3 mr-6 md:mr-8">
           <img
             src={Logo}
             alt="Yashastra Technologys"
@@ -102,7 +102,7 @@ const Navbar = () => {
 
           {/* Search Bar */}
           <div className="px-6 pb-6 md:pb-0 md:ml-4">
-            <div className="flex items-center bg-white rounded-md px-3 py-2 shadow-md w-full md:w-[260px]">
+            <div className="flex items-center bg-white rounded-md px-3 py-2 shadow-md w-full md:w-65">
               <input
                 type="text"
                 placeholder="Search..."
