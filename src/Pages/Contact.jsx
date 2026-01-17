@@ -103,14 +103,14 @@ const Contact = () => {
             {/* Google Map */}
             <div className="bg-white rounded-xl shadow-md overflow-hidden">
               <iframe
-  title="Yashastra Technologies Location"
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3715.3441712829267!2d74.23885517431643!3d21.376348875751248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdf09b070a4fabb%3A0xdb40df063d75f095!2sYashastra%20Technologies%20PVT.LTD!5e0!3m2!1sen!2sin!4v1768585378418!5m2!1sen!2sin"
-  width="100%"
-  height="300"
-  style={{ border: 0 }}
-  allowFullScreen
-  loading="lazy"
-></iframe>
+                title="Yashastra Technologies Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3715.3441712829267!2d74.23885517431643!3d21.376348875751248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdf09b070a4fabb%3A0xdb40df063d75f095!2sYashastra%20Technologies%20PVT.LTD!5e0!3m2!1sen!2sin!4v1768585378418!5m2!1sen!2sin"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
 
             </div>
 
