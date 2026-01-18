@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://www.yashastratechnologies.com/api",
+  baseURL: "https://yashastra-backend.onrender.com/api",
 });
 
 export default API;
