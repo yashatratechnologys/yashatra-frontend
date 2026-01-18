@@ -1,4 +1,45 @@
+import { useState } from "react";
+import api from "../services/api";
+
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      await api.post("/contact", formData);
+      alert("Message sent successfully!");
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-100 py-20 px-4 mt-9">
       <div className="max-w-6xl mx-auto">
@@ -23,12 +64,16 @@ const Contact = () => {
               Send Us a Message
             </h2>
 
-            <form className="space-y-5">
+            <form className="space-y-5" onSubmit={handleSubmit}>
               <div>
                 <label className="block mb-1 font-medium">Full Name</label>
                 <input
                   type="text"
+                  name="name"
                   placeholder="Enter your name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
                   className="w-full border rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
                 />
               </div>
@@ -37,7 +82,11 @@ const Contact = () => {
                 <label className="block mb-1 font-medium">Email</label>
                 <input
                   type="email"
+                  name="email"
                   placeholder="Enter your email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
                   className="w-full border rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
                 />
               </div>
@@ -46,7 +95,11 @@ const Contact = () => {
                 <label className="block mb-1 font-medium">Mobile Number</label>
                 <input
                   type="tel"
+                  name="phone"
                   placeholder="Enter mobile number"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
                   className="w-full border rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
                 />
               </div>
@@ -55,16 +108,21 @@ const Contact = () => {
                 <label className="block mb-1 font-medium">Message</label>
                 <textarea
                   rows="4"
+                  name="message"
                   placeholder="Write your message..."
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
                   className="w-full border rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="bg-blue-800 text-white px-8 py-3 rounded-md hover:bg-blue-900 transition"
+                disabled={loading}
+                className="bg-blue-800 text-white px-8 py-3 rounded-md hover:bg-blue-900 transition disabled:opacity-60"
               >
-                Submit
+                {loading ? "Sending..." : "Submit"}
               </button>
             </form>
           </div>
@@ -111,7 +169,6 @@ const Contact = () => {
                 allowFullScreen
                 loading="lazy"
               ></iframe>
-
             </div>
 
           </div>
