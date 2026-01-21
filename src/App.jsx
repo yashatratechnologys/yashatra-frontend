@@ -2,24 +2,22 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import Navbar from "./components/common/Navbar";
-
-import Home from "./Pages/Home";
-import About from "./Pages/About";
-import Register from "./Pages/Register";
-import Courses from "./Pages/Courses";
-import Services from "./Pages/Services";
-import Contact from "./Pages/Contact";
-import Login from "./pages/admin/Login";
-import Dashboard from "./pages/admin/Dashboard";
-import AdminLayout from "./Pages/admin/AdminLayout";
-// import Dashboard from "./Pages/admin/Dashboard";
-import Contacts from "./Pages/admin/Contacts";
-import Registrations from "./Pages/admin/Registrations";
-
 import ProtectedRoute from "./components/ProtectedRoute";
 
+// Public pages
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Register from "./pages/Register";
+import Courses from "./pages/Courses";
+import Services from "./pages/Services";
+import Contact from "./pages/Contact";
 
-
+// Admin pages
+import Login from "./pages/admin/Login";
+import AdminLayout from "./pages/admin/AdminLayout";
+import Dashboard from "./pages/admin/Dashboard";
+import Contacts from "./pages/admin/Contacts";
+import Registrations from "./pages/admin/Registrations";
 
 function App() {
   return (
@@ -27,8 +25,9 @@ function App() {
       <Navbar />
 
       {/* Padding for fixed navbar */}
-      <div className="pt-7.5">
+      <div className="pt-16">
         <Routes>
+          {/* Public Routes */}
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/register" element={<Register />} />
@@ -36,20 +35,18 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
 
-          <Route path="/admin" element={
-            <ProtectedRoute>
-              <AdminLayout />
-            </ProtectedRoute>
-          }>
-            </Route>
-            {/* <Route path="/admin/login" element={<Login />} />
-            <Route index element={<Dashboard />} />
-            <Route path="contacts" element={<Contacts />} />
-            <Route path="registrations" element={<Registrations />} />
-          </Route> */}
-
+          {/* Admin Login (PUBLIC) */}
           <Route path="/admin/login" element={<Login />} />
-          <Route path="/admin" element={<AdminLayout />}>
+
+          {/* Admin Protected Routes */}
+          <Route
+            path="/admin"
+            element={
+              <ProtectedRoute>
+                <AdminLayout />
+              </ProtectedRoute>
+            }
+          >
             <Route index element={<Dashboard />} />
             <Route path="contacts" element={<Contacts />} />
             <Route path="registrations" element={<Registrations />} />
