@@ -11,6 +11,7 @@ import Register from "./pages/Register";
 import Courses from "./pages/Courses";
 import Services from "./pages/Servicess";
 import Contact from "./pages/Contact";
+// done with mapping public pages
 
 // Admin pages
 import Login from "./pages/admin/Login";
