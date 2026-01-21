@@ -37,7 +37,7 @@ const services = [
   },
 ];
 
-const Services = () => {
+const Servicess = () => {
   return (
     <div className="min-h-screen bg-gray-100 py-20 px-4 mt-9">
       <div className="max-w-6xl mx-auto">
@@ -88,4 +88,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Servicess;
