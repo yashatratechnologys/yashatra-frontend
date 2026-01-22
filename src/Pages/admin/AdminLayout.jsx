@@ -1,11 +1,22 @@
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const AdminLayout = () => {
-  const navigate = useNavigate(); // ✅ INSIDE component
+  const navigate = useNavigate();
 
+  // 🔐 AUTH CHECK ON LOAD
+  useEffect(() => {
+    const token = localStorage.getItem("adminToken");
+
+    if (!token) {
+      navigate("/admin/login", { replace: true });
+    }
+  }, [navigate]);
+
+  // 🔓 LOGOUT
   const handleLogout = () => {
     localStorage.removeItem("adminToken");
-    navigate("/admin/login");
+    navigate("/admin/login", { replace: true });
   };
 
   const linkClass = ({ isActive }) =>
@@ -15,7 +26,6 @@ const AdminLayout = () => {
 
   return (
     <div className="min-h-screen flex bg-gray-100">
-      
       {/* Sidebar */}
       <aside className="w-64 bg-blue-900 text-white p-6 flex flex-col justify-between">
         <div>
@@ -52,7 +62,7 @@ const AdminLayout = () => {
           </nav>
         </div>
 
-        {/* Logout Button */}
+        {/* Logout */}
         <button
           onClick={handleLogout}
           className="mt-8 w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded"
@@ -65,7 +75,6 @@ const AdminLayout = () => {
       <main className="flex-1 p-8">
         <Outlet />
       </main>
-
     </div>
   );
 };
