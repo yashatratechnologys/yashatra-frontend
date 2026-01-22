@@ -8,6 +8,13 @@ const Login = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  useEffect(() => {
+  const token = localStorage.getItem("adminToken");
+  if (token) {
+    navigate("/admin", { replace: true });
+  }
+}, [navigate]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
