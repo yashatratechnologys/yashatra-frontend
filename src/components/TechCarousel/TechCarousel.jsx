@@ -1,5 +1,4 @@
 import React from "react";
-import "./TechCarousel.css";
 
 import python from "../../assets/TechCarousel/python.png";
 import java from "../../assets/TechCarousel/java.png";
@@ -17,22 +16,76 @@ const technologies = [
 
 const TechCarousel = () => {
   return (
-    <div className="techname">
-      <h1>Our Technologies</h1>
-
-    <div className="tech-carousel">
-      
-      <div className="tech-track">
-        {/* duplicate for infinite scroll */}
-        {[...technologies, ...technologies].map((tech, index) => (
-          <div className="tech-card" key={index}>
-            <img src={tech.logo} alt={tech.name} />
-            <p>{tech.name}</p>
-          </div>
-        ))}
+    <section className="w-full bg-[#ce6a6a] py-16 overflow-hidden">
+      {/* Heading */}
+      <div className="text-center mb-10">
+        <h2 className="text-3xl font-bold text-white tracking-wide">
+          Our Technologies
+        </h2>
+        <p className="text-white/80 mt-2">
+          Tools & technologies we work with
+        </p>
       </div>
-    </div>
+
+      {/* Carousel */}
+      <div className="relative w-full overflow-hidden">
+        <div
+          className="
+            flex w-max
+            animate-[scroll_20s_linear_infinite]
+          "
+        >
+          {[...technologies, ...technologies].map((tech, index) => (
+            <div
+              key={index}
+              className="
+                flex-shrink-0
+                w-[160px] mx-5
+                text-center text-white
+                group
+              "
+            >
+              <div
+                className="
+                  flex items-center justify-center
+                  w-20 h-20 mx-auto mb-3
+                  rounded-full bg-white/10
+                  transition-transform duration-300
+                  group-hover:scale-110
+                "
+              >
+                <img
+                  src={tech.logo}
+                  alt={tech.name}
+                  className="
+                    w-14 h-14 object-contain
+                    transition duration-300
+                  "
+                />
+              </div>
+
+              <p className="text-sm tracking-wide">
+                {tech.name}
+              </p>
+            </div>
+          ))}
         </div>
+      </div>
+
+      {/* Keyframes */}
+      <style>
+        {`
+          @keyframes scroll {
+            from {
+              transform: translateX(0);
+            }
+            to {
+              transform: translateX(-50%);
+            }
+          }
+        `}
+      </style>
+    </section>
   );
 };
 

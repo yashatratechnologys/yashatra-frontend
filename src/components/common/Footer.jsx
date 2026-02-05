@@ -55,7 +55,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="footer-bottom">
-        <p>© 2025 Yashatra Technologys Pvt.Ltd. All Rights Reserved.</p>
+        <p>© 2025 Yashatra Technologies Pvt.Ltd. All Rights Reserved.</p>
 
         <div className="social">
           <span>Follow On</span>

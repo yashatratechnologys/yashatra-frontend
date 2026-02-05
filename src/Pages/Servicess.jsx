@@ -48,7 +48,7 @@ const Servicess = () => {
             Our Services
           </h1>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Yashastra Technologys provides comprehensive training and technology
+            Yashastra Technologies provides comprehensive training and technology
             solutions focused on quality, innovation, and career growth.
           </p>
         </div>

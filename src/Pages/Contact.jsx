@@ -50,7 +50,7 @@ const Contact = () => {
             Contact Us
           </h1>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Get in touch with Yashastra Technologys Pvt. Ltd. for training,
+            Get in touch with Yashastra Technologies Pvt. Ltd. for training,
             admissions, or collaboration opportunities.
           </p>
         </div>
@@ -138,7 +138,7 @@ const Contact = () => {
 
               <p className="text-gray-700 mb-2">
                 <strong>Address:</strong><br />
-                Yashastra Technologys Pvt. Ltd.<br />
+                Yashastra Technologies Pvt. Ltd.<br />
                 Nandurbar, Maharashtra, India
               </p>
 

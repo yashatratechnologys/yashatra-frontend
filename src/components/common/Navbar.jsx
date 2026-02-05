@@ -37,7 +37,7 @@ const Navbar = () => {
         <NavLink to="/" className="flex items-center gap-3 mr-6 md:mr-8">
           <img
             src={Logo}
-            alt="Yashastra Technologys"
+            alt="Yashastra Technologies"
             className={`transition-all duration-300 ${
               scrolled ? "h-13.75" : "h-17.5"
             }`}

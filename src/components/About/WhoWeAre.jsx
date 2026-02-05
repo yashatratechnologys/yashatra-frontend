@@ -1,3 +1,5 @@
+import banner5 from "../../assets/Banners/banner5.jpeg";
+
 const WhoWeAre = () => {
   return (
     <section className="py-16 bg-gray-50">
@@ -5,7 +7,7 @@ const WhoWeAre = () => {
         <div>
           <h2 className="text-3xl font-bold mb-4">Who We Are</h2>
           <p className="text-gray-700 mb-4">
-            <strong>Yashastra Technologys Pvt. Ltd.</strong> is a professional
+            <strong>Yashastra Technologies Pvt. Ltd.</strong> is a professional
             technology training and software solutions company committed to
             bridging the gap between academic learning and industry requirements.
           </p>
@@ -17,8 +19,8 @@ const WhoWeAre = () => {
           </p>
         </div>
         <img
-          src="/about/company.jpg"
-          alt="Yashastra Technologys"
+          src={banner5}
+          alt="Yashastra Technologies"
           className="rounded-xl shadow-lg"
         />
       </div>
