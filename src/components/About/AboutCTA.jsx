@@ -5,7 +5,7 @@ const AboutCTA = () => {
         Start Your Learning Journey With Us
       </h2>
       <p className="mb-6">
-        Join Yashastra Technologys and build a strong foundation for your career.
+        Join Yashastra Technologies and build a strong foundation for your career.
       </p>
       <a
         href="/register"

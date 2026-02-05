@@ -1,9 +1,11 @@
+import Training from "../../assets/About/Training.jpg";
+
 const Infrastructure = () => {
   return (
     <section className="py-16">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
         <img
-          src="/about/lab.jpg"
+          src={Training}
           alt="Training Infrastructure"
           className="rounded-xl shadow-lg"
         />
