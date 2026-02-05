@@ -5,7 +5,7 @@ import Navbar from "./components/common/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 // Public pages
-import Home from "./pages/Home";
+import Home from "./pages/Home"
 import About from "./pages/About";
 import Register from "./pages/Register";
 import Courses from "./pages/Courses";
