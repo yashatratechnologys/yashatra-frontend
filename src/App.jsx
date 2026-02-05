@@ -4,28 +4,26 @@ import "./App.css";
 import Navbar from "./components/common/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
 
-// Public pages
-import Home from "./Pages/Home"
-import About from "./Pages/About"
-import Register from "./Pages/Register";
-import Courses from "./Pages/Courses";
-import Services from "./Pages/Servicess";
-import Contact from "./Pages/Contact";
-// done with mapping public pages
+// Public pages (FIXED: pages lowercase)
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Register from "./pages/Register";
+import Courses from "./pages/Courses";
+import Services from "./pages/Servicess";
+import Contact from "./pages/Contact";
 
 // Admin pages
-import Login from "./Pages/admin/Login";
-import AdminLayout from "./Pages/admin/AdminLayout";
-import Dashboard from "./Pages/admin/Dashboard";
-import Contacts from "./Pages/admin/Contacts";
-import Registrations from "./Pages/admin/Registrations";
+import Login from "./pages/admin/Login";
+import AdminLayout from "./pages/admin/AdminLayout";
+import Dashboard from "./pages/admin/Dashboard";
+import Contacts from "./pages/admin/Contacts";
+import Registrations from "./pages/admin/Registrations";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
 
-      {/* Padding for fixed navbar */}
       <div className="pt-16">
         <Routes>
           {/* Public Routes */}
@@ -36,7 +34,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
 
-          {/* Admin Login (PUBLIC) */}
+          {/* Admin Login */}
           <Route path="/admin/login" element={<Login />} />
 
           {/* Admin Protected Routes */}
