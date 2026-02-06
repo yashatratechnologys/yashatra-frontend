@@ -1,6 +1,6 @@
-import director1 from "../../assets/Banners/banner3.jpeg";
+import director1 from "../../assets/hitesh.png";
 import director2 from "../../assets/photo.jpeg";
-import director3 from "../../assets/Banners/banner4.jpeg";
+import director3 from "../../assets/harshal.jpeg";
 
 const Directors = () => {
   return (
@@ -31,7 +31,7 @@ const Directors = () => {
             Mr. Hitesh Tamboli 
           </h3>
           <p className="text-blue-600 font-medium mb-4">
-            Managing Director ( CEO )
+            Chief Executive Officer (CEO)
           </p>
           <p className="text-gray-600 italic text-sm">
             “Driving innovation and building sustainable business solutions
@@ -82,7 +82,7 @@ const Directors = () => {
             Mr. Harshal Borse
           </h3>
           <p className="text-blue-600 font-medium mb-4">
-            Finance Director ( CFO )
+            Managing Director ( MD )
           </p>
           <p className="text-gray-600 italic text-sm">
             “Committed to operational excellence, quality delivery, and
