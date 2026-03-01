@@ -39,6 +39,9 @@ const Directors = () => {
           <p className="text-gray-500 text-sm mt-1 mb-4">
             Leadership & Strategic Management
           </p>
+          <p className="text-gray-500 text-sm mt-1 mb-4">
+            M.Tech (Power Systems) | 3+ Years in Industry & Academia
+          </p>
 
           <p className="text-gray-600 italic text-sm">
             “Driving innovation and building sustainable business solutions
@@ -62,6 +65,9 @@ const Directors = () => {
           <p className="text-blue-600 font-medium">
             Chief Technical Officer (CTO)
           </p>
+            <p className="text-gray-500 text-sm mt-1 mb-4">
+            Technology Strategy & Innovation
+          </p>
 
           <p className="text-gray-500 text-sm mt-1 mb-4">
             MCA | 2+ Years in Teaching & Development
@@ -78,7 +84,7 @@ const Directors = () => {
                         transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
           <img
             src={director3}
-            alt="Managing Director"
+            alt="Chief Growth Officer"
             className="w-36 h-36 mx-auto rounded-full object-cover mb-4 ring-4 ring-blue-100"
           />
 
@@ -87,11 +93,14 @@ const Directors = () => {
           </h3>
 
           <p className="text-blue-600 font-medium">
-            Managing Director (MD)
+            Chief Growth Officer (CGO)
           </p>
 
           <p className="text-gray-500 text-sm mt-1 mb-4">
             Operations & Business Management
+          </p>
+          <p className="text-gray-500 text-sm mt-1 mb-4">
+            M.Tech (AI & ML) | 3+ Years in AI Research & Development
           </p>
 
           <p className="text-gray-600 italic text-sm">
